@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chemistry Era</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzJc2e3_oeAQsKsqAuYtENXYNrv3nFGfOydg&usqp=CAU" type="image/x-icon ">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row bg-dark pb-4">
+        <div class="col-8 p-4">
+            <div class="row mt-2 mb-2">
+                <div class="col-2">
+
+                </div>
+                <div class="col-10">
+                    <h1 class="text-center text-secondary pt-4 pb-4" style="font-size: 100px;" id="name">Hydrogen</h1>
+                </div>
+            </div>
+            <div class="row m-0 p-0">
+                <div class="col-6 justify-content-end">
+                    <p class="text-light text-end display-3 mr-4 mt-4" id="number"><b>1</b></p>
+                </div>
+                <div class="col-6">
+                    <h4 class="text-secondary text-start ml-4 mt-4 pt-3">Atomic Number</h4>
+                </div>
+            </div>
+            <div class="row m-0 p-0">
+                <div class="col-6 justify-content-end">
+                    <h4 class="text-secondary text-end ml-4 mt-4 pt-4">Symbol</h4>
+                </div>
+                <div class="col-6">
+                    <h1 class="text-start text-light" style="font-size: 200px;" id="symbol">H</h1>
+                </div>
+            </div>
+            <div class="row m-0 p-0">
+                <div class="col-6 justify-content-end">
+                    <p class="text-light text-end display-3 mr-4 mt-4" id="weight"><b>1</b></p>
+                </div>
+                <div class="col-6">
+                    <h4 class="text-secondary text-start ml-4 mt-4 pt-3">Atomic Weight</h4>
+                </div>
+            </div>
+            <div class="row m-0 p-0">
+                <div class="col-6 justify-content-end">
+                    <h4 class="text-secondary text-end ml-4 mt-4 pt-4">Use</h4>
+                </div>
+                <div class="col-6 pt-4">
+                    <h4 class="text-start text-light mt-4" id="use">Rocket fuel is a major use of hydrogen for energy.</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 p-4">
+            <div class="row mt-4">
+                <input type="text" name="searchElement" id="an" class="w-50 m-2 p-2 text-secondary text-center border border-secondary" value="1" style="background: transparent; font-size: 50px;">
+                <button type="submit" class="btn btn-outline-secondary w-50 m-2 p-4 text-center text-light rounded d-inline shadow-lg" onclick="changeValue()"><b>Search for Element</b></button>
+                <h5 class="text-secondary m-2 pr-4" id="invalid"></h6>
+            </div>
+        </div>
+        <h5 class="text-secondary text-end p-4">Sarikonda Anil M.Sc Chemistry</h5>
+    </div>
+    <script>
+        function changeValue(){
+            let n = document.getElementById("an").value;
+            if((n<1)||(n>20)){
+                document.getElementById("invalid").innerHTML="Invalid Input </br> Enter Atomic Number in the range of 1 and 20";
+                return;
+            }
+            document.getElementById("invalid").innerHTML="";
+            if(n==1){
+                document.getElementById("name").innerHTML="Hydrogen";
+                document.getElementById("number").innerHTML="1";
+                document.getElementById("symbol").innerHTML="H";
+                document.getElementById("weight").innerHTML="1";
+                document.getElementById("use").innerHTML="Rocket fuel is a major use of hydrogen for energy.";
+            }
+            else if(n==2){
+                document.getElementById("name").innerHTML="Helium";
+                document.getElementById("number").innerHTML="2";
+                document.getElementById("symbol").innerHTML="He";
+                document.getElementById("weight").innerHTML="4";
+                document.getElementById("use").innerHTML="Heliox mixtures in respiratory treatments for asthma, bronchitis and other lung deficiencies.";
+            }
+            else if(n==3){
+                document.getElementById("name").innerHTML="Lithium";
+                document.getElementById("number").innerHTML="3";
+                document.getElementById("symbol").innerHTML="Li";
+                document.getElementById("weight").innerHTML="7";
+                document.getElementById("use").innerHTML="Lithium is known most commonly to be used in batteries.";
+            }
+            else if(n==4){
+                document.getElementById("name").innerHTML="Beryllium";
+                document.getElementById("number").innerHTML="4";
+                document.getElementById("symbol").innerHTML="Be";
+                document.getElementById("weight").innerHTML="9";
+                document.getElementById("use").innerHTML="This element is most commonly used as an alloying agent for copper. ";
+            }
+            else if(n==5){
+                document.getElementById("name").innerHTML="Boron";
+                document.getElementById("number").innerHTML="5";
+                document.getElementById("symbol").innerHTML="B";
+                document.getElementById("weight").innerHTML="11";
+                document.getElementById("use").innerHTML="Boron is used in pyrotechnics.";
+            }
+            else if(n==6){
+                document.getElementById("name").innerHTML="Carbon";
+                document.getElementById("number").innerHTML="6";
+                document.getElementById("symbol").innerHTML="C";
+                document.getElementById("weight").innerHTML="12";
+                document.getElementById("use").innerHTML="Carbon is the basis for the world's natural organic fuels such as natural gas, coal, and oil.";
+            }
+            else if(n==7){
+                document.getElementById("name").innerHTML="Nitrogen";
+                document.getElementById("number").innerHTML="7";
+                document.getElementById("symbol").innerHTML="N";
+                document.getElementById("weight").innerHTML="14";
+                document.getElementById("use").innerHTML="The element is significant to the chemical industry as it is a key nutrient in fertilizers and a key component in nitric acid, nylon, and explosive materials.";
+            }
+            else if(n==8){
+                document.getElementById("name").innerHTML="Oxygen";
+                document.getElementById("number").innerHTML="8";
+                document.getElementById("symbol").innerHTML="O";
+                document.getElementById("weight").innerHTML="16";
+                document.getElementById("use").innerHTML="Oxygen is the most important element to human's survival. Pure oxygen is used to treat breathing problems and make spacecraft livable.";
+            }
+            else if(n==9){
+                document.getElementById("name").innerHTML="Flourine";
+                document.getElementById("number").innerHTML="9";
+                document.getElementById("symbol").innerHTML="F";
+                document.getElementById("weight").innerHTML="19";
+                document.getElementById("use").innerHTML=" Fluorine is a common additive to drinking water and is used as a cleaning agent in toothpaste.";
+            }
+            else if(n==10){
+                document.getElementById("name").innerHTML="Neon";
+                document.getElementById("number").innerHTML="10";
+                document.getElementById("symbol").innerHTML="Ne";
+                document.getElementById("weight").innerHTML="20";
+                document.getElementById("use").innerHTML="By far the most prominent use of the element is used in advertising signs.";
+            }
+            else if(n==11){
+                document.getElementById("name").innerHTML="Sodium";
+                document.getElementById("number").innerHTML="11";
+                document.getElementById("symbol").innerHTML="Na";
+                document.getElementById("weight").innerHTML="23";
+                document.getElementById("use").innerHTML="Sodium is used in streetlights to produce yellow light as well as being a component in many compounds like table salt, soda ash, borax, and baking soda.";
+            }
+            else if(n==12){
+                document.getElementById("name").innerHTML="Magnesium";
+                document.getElementById("number").innerHTML="12";
+                document.getElementById("symbol").innerHTML="Mg";
+                document.getElementById("weight").innerHTML="24";
+                document.getElementById("use").innerHTML="Magnesium finds many of its uses in medicine as Epsom salts, milk of magnesia, chloride, and citrate. Magnesium is also essential to both animal and plant life.";
+            }
+            else if(n==13){
+                document.getElementById("name").innerHTML="Aluminium";
+                document.getElementById("number").innerHTML="13";
+                document.getElementById("symbol").innerHTML="Al";
+                document.getElementById("weight").innerHTML="27";
+                document.getElementById("use").innerHTML="Aluminum is a soft and malleable metal that has uses in cans and fouls, utensils, airplane and automotive parts, and other structural applications.";
+            }
+            else if(n==14){
+                document.getElementById("name").innerHTML="Silicon";
+                document.getElementById("number").innerHTML="14";
+                document.getElementById("symbol").innerHTML="Si";
+                document.getElementById("weight").innerHTML="28";
+                document.getElementById("use").innerHTML=" Silicon is used extensively in the semiconductor industry in solid-state electronics.";
+            }
+            else if(n==15){
+                document.getElementById("name").innerHTML="Phosphorus";
+                document.getElementById("number").innerHTML="15";
+                document.getElementById("symbol").innerHTML="P";
+                document.getElementById("weight").innerHTML="31";
+                document.getElementById("use").innerHTML="Phosphorus is the main nutrient for organic life through phosphate compounds. It is used in fertilizers to uphold the biological phosphorus cycle.";
+            }
+            else if(n==16){
+                document.getElementById("name").innerHTML="Sulfur";
+                document.getElementById("number").innerHTML="16";
+                document.getElementById("symbol").innerHTML="S";
+                document.getElementById("weight").innerHTML="32";
+                document.getElementById("use").innerHTML="Sulfur is used in gunpowder and other pyrotechnics, rubber manufacturing, and as an insecticide, fungicide, and fumigant.";
+            }
+            else if(n==17){
+                document.getElementById("name").innerHTML="Chlorine";
+                document.getElementById("number").innerHTML="17";
+                document.getElementById("symbol").innerHTML="Cl";
+                document.getElementById("weight").innerHTML="35.5";
+                document.getElementById("use").innerHTML="Chlorine is used in water treatment and as an antiseptic.";
+            }
+            else if(n==18){
+                document.getElementById("name").innerHTML="Argon";
+                document.getElementById("number").innerHTML="18";
+                document.getElementById("symbol").innerHTML="Ar";
+                document.getElementById("weight").innerHTML="40";
+                document.getElementById("use").innerHTML="Argon is used in incandescent and fluorescent bulbs as a protective layer around the filament to keep oxygen from corroding it.";
+            }
+            else if(n==19){
+                document.getElementById("name").innerHTML="Potassium";
+                document.getElementById("number").innerHTML="19";
+                document.getElementById("symbol").innerHTML="K";
+                document.getElementById("weight").innerHTML="39";
+                document.getElementById("use").innerHTML="Potassium is mainly used in compounds. It is combined with chlorine to produce potassium chloride which is used in fertilizers.";
+            }
+            else if(n==20){
+                document.getElementById("name").innerHTML="Calcium";
+                document.getElementById("number").innerHTML="20";
+                document.getElementById("symbol").innerHTML="Ca";
+                document.getElementById("weight").innerHTML="40";
+                document.getElementById("use").innerHTML=" Calcium is used to prepare thorium and uranium as a reducing agent. It is also used as an alloying agent in aluminum, copper, lead, and magnesium.";
+            }
+            return;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
